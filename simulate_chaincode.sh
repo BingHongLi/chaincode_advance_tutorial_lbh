@@ -1,4 +1,6 @@
 #!/bin/bash
 # 僅供參考，不要直接掛載
-docker exec chaincode /bin/bash  -c " cd lbh_tuna_demo ; echo prepare to build ; go build ; "
-docker exec chaincode /bin/bash -c " cd lbh_tuna_demo ; CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=lbh_tuna_demo:0 ./lbh_tuna_demo "
+docker exec -it chaincode bash
+cd chaincode_advance_tutorial_lbh
+go build
+CORE_PEER_ADDRESS=peer:7052 CORE_CHAINCODE_ID_NAME=chaincode_advance_tutorial_lbh:0 ./chaincode_advance_tutorial_lbh

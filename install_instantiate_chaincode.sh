@@ -1,3 +1,4 @@
-#!/bin/bash
-docker exec cli peer chaincode install -p chaincodedev/chaincode/lbh_tuna_demo -n lbh_tuna_demo -v 0
-docker exec cli peer chaincode instantiate -n lbh_tuna_demo -v 0  -c '{"Args":[]}' -C myc
+docker exec -it cli bash
+cd chaincode/chaincode_advance_tutorial_lbh
+peer chaincode install -p chaincodedev/chaincode/chaincode_advance_tutorial_lbh -n chaincode_advance_tutorial_lbh -v 0
+peer chaincode instantiate -n chaincode_advance_tutorial_lbh -v 0  -c '{"Args":[]}' -C myc
